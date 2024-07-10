@@ -79,7 +79,7 @@ async function calculatePremium(sumAssured, gender, age, term, premiumData) {
       if (!factorData) {
         throw new ApiError(404, "Factor data not found");
       }
-      const { maleFactor, transFactor } = factorData;
+      const { maleFactor } = factorData;
       return (maleFactor * sumAssured / 1000) + femalePremium;
 
     } else if (gender === 'trans') {
