@@ -16,7 +16,7 @@ const uploadExcel = asyncHandler( async (req,res)=>{
         throw new ApiError(400, "Premium excel file is required")
     }
 
-  const workbook = xlsx.readFile(file.path);
+  const workbook = xlsx.readFile(premiumLocalPath);
   const sheetName1 = workbook.SheetNames[0];
   const sheetName2 = workbook.SheetNames[1];
   const premium = workbook.Sheets[sheetName1];
