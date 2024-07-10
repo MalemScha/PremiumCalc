@@ -11,7 +11,7 @@ const premiumSchema = new Schema(
             type: Number,
             required: true,
         },
-        price:
+        premium:
         {
             type: Number,
             required: true,
