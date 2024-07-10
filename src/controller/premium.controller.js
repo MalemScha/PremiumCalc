@@ -29,7 +29,7 @@ const uploadExcel = asyncHandler( async (req,res)=>{
   const premiumData = allPremiumData.map(row => ({
     age: row['Age'],
     term: row['Term'],
-    premium: row['Premium'],
+    premium: row['Premium'].replace(/[^\d.-]/g, ''),
   }));
 
   const maleFactorData = allFactorData.map(row => ({
